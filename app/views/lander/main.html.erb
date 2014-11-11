@@ -1,0 +1,36 @@
+<div class="container" style="padding-top: 100px">
+  <div class="jumbotron jumbotron-background">
+    <div class="row">
+      <div class="col-md-6">
+        <p>Just input your mood . . .</p>
+        <label> </label>
+        <br/>
+
+        <div class="input-group">
+          <input type="text" class="form-control">
+<span class="input-group-btn">
+<%= link_to posts_path do%>
+  <button class="btn btn-default" type="button">Go!</button>
+<% end%>
+                                                   </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+      <div class="col-md-6">
+        <p>Or sign up</p>
+        <%= form_for(:user, :url => registration_path(:user)) do |f| %>
+            <div><%= f.label :email %><br />
+              <%= f.email_field :email %></div>
+
+            <div><%= f.label :password %><br />
+              <%= f.password_field :password %></div>
+
+            <div><%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation %></div>
+
+            <div><%= f.submit "Sign up" %></div>
+<% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    display: block;
+    background-image: url('maxresdefault.jpg');
+    background-color: #2b3e50;
+    width: 1920px;
+    height: 1080px;
+
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+.background-color {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background-color: rgba(78, 93, 108, .7);
+    width: 1920px;
+    height: 1080px;
+}
+.jumbotron-background{
+    background-color: #2b3e50;
+}

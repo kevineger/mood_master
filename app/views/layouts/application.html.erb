@@ -7,8 +7,57 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="background-image">
+</div>
+<div class="background-color">
+</div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height: 50px">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">LOGO GOES HERE</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <% if !user_signed_in? %>
+        <%= form_for(:user, :html => {:class => "navbar-form navbar-right", :style=>"margin-top:5px; margin-bottom:5px"}, :url => session_path(:user)) do |f| %>
+            <div class="form-group" style="padding-right: 4px">
+              <%= f.text_field :login, :class => "form-control" %>
+            </div>
+            <div class="form-group" style="padding-right: 4px">
+              <%= f.password_field :password, :class => "form-control" %>
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          <% end %>
+      <% else %>
+          <div class="navbar-right navbar-form" style="margin-top: 5px; margin-bottom: 5px">
+            <%=link_to destroy_user_session_path, :method => 'DELETE' do%>
+                <button class="btn btn-primary">Logout</button>
+            <% end %>
+          </div>
+      <% end %>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
 
-<%= yield %>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<%= yield%>
 
+
+<footer>
+  <center><p><strong>MoodMaster</strong> Copyright 2014</p>
+  </center>
+</footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>
