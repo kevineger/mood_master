@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3649670282">
+  <component name="DataSourceManagerImpl" format="xml" hash="3898520102">
     <data-source source="LOCAL" name="Rails mood_master: development" uuid="f2ce602b-9aa9-42cf-b714-7f3cd7bffcbb">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
