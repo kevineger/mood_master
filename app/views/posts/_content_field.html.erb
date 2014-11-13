@@ -1,6 +1,10 @@
-<div>
-	<%= f.label :name, "Name" %> 
-	<%= f.text_field :name %>
-	<%= f.label :link, "Link" %> 
-	<%= f.text_field :link %> 
+<div class="link-box">
+	<div class="input-group">
+		<span class="input-group-addon">Name</span>
+		<%= f.text_field :name, :class=>'form-control'%>
+	</div>
+	<div class="input-group">
+		<span class="input-group-addon">URL</span>
+		<%= f.text_field :link, :class=>'form-control'%>
+	</div>
 </div>
