@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
+  before_action :authenticate_user!, only: [:new, :create,:edit, :update, :destroy, :like, :unlike]
 
   # GET /posts
   # GET /posts.json

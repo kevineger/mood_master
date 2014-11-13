@@ -9,9 +9,9 @@
         <div class="input-group">
           <input type="text" class="form-control">
 <span class="input-group-btn">
-<%= link_to posts_path do%>
+<%= link_to posts_path do %>
   <button class="btn btn-default" type="button">Go!</button>
-<% end%>
+<% end %>
                                                    </span>
         </div>
         <!-- /input-group -->
@@ -19,17 +19,20 @@
       <div class="col-md-6">
         <p>Or sign up</p>
         <%= form_for(:user, :url => registration_path(:user)) do |f| %>
-            <div><%= f.label :email %><br />
-              <%= f.email_field :email %></div>
+            <div><%= f.label :email %>
+              <br/>
+              <%= f.email_field :email, :class => "form-control" %></div>
 
-            <div><%= f.label :password %><br />
-              <%= f.password_field :password %></div>
+            <div><%= f.label :password %>
+              <br/>
+              <%= f.password_field :password, :class => "form-control" %></div>
 
-            <div><%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation %></div>
-
-            <div><%= f.submit "Sign up" %></div>
-<% end %>
+            <div><%= f.label :password_confirmation %>
+              <br/>
+              <%= f.password_field :password_confirmation, :class => "form-control" %></div>
+        <br/>
+            <div><%= f.submit "Sign up", :class =>"btn btn-success" %></div>
+        <% end %>
       </div>
     </div>
   </div>
