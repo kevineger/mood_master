@@ -8,7 +8,7 @@
 <% else %>
     <%= link_to 'Like', like_post_path(@post), method: 'post'%>
 <% end %>-->
-<div class="container" style="padding-top:20px;">
+<div class="container animated fadeIn" style="padding-top:20px;">
 	<div class="row" style="text-align:center">
 		<h1><%= @post.name %></h1>
 		<%= image_tag("placeholder.png", :style=>'height:300px;') %>

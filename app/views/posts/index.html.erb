@@ -1,29 +1,31 @@
 <div class="container">
   <div class="row">
   <% @posts.each do |post| %>
-    <div class="row" style="margin-top:20px;">
-      <div class="col-lg-6" style="text-align:right">
-        <!-- image -->
-        <%= link_to post do %>
-          <%= image_tag("placeholder.png", :style=>'height:300px;') %>
-        <% end %>
-      </div>
-      <div class="col-lg-6" style="position:relative; height:300px;">
-        <!-- content description -->
-        <h3>Title for post</h3>
-        <!-- <span class="glyphicon glyphicon-heart"></span> -->
-        <h4><3 243</h4>
-        <h4>9 total links</h4>
-        <!-- If link medium isn't included, add CSS class 'desaturized' to image (makes it B&W) -->
-        <%= image_tag("youtube.png", :class=>'pic-url-icon') %>
-        <%= image_tag("reddit.png", :class=>'pic-url-icon') %>
-        <%= image_tag("imgur.png", :class=>'pic-url-icon') %>
-        <%= image_tag("8tracks.svg", :class=>'pic-url-icon') %>
-        <!-- Get the correct number of other urls -->
-        <p style="display:inline">5 other urls</p>
-        <div class="row" style="position: absolute; bottom: 0; width: 100%; height: 50px; border-top: 1px solid #4E5D6C;">
-          <p class="pull-left" style="margin-top:5px;"><%= post.user.username %></p>
-          <p class="pull-right" style="margin-top:5px;">updated <%= time_ago_in_words(post.updated_at) %> ago</p>
+    <div class="post-container animated fadeIn">
+      <div class="row" style="margin-top:20px;">
+        <div class="col-lg-4" style="text-align:right">
+          <!-- image -->
+          <%= link_to post do %>
+            <%= image_tag("placeholder.png", :style=>'height:300px;') %>
+          <% end %>
+        </div>
+        <div class="col-lg-8" style="position:relative; height:300px;">
+          <!-- content description -->
+          <h3>Title for post</h3>
+          <!-- <span class="glyphicon glyphicon-heart"></span> -->
+          <h4><3 243</h4>
+          <h4>9 total links</h4>
+          <!-- If link medium isn't included, add CSS class 'desaturized' to image (makes it B&W) -->
+          <%= image_tag("youtube.png", :class=>'pic-url-icon') %>
+          <%= image_tag("reddit.png", :class=>'pic-url-icon') %>
+          <%= image_tag("imgur.png", :class=>'pic-url-icon') %>
+          <%= image_tag("8tracks.svg", :class=>'pic-url-icon') %>
+          <!-- Get the correct number of other urls -->
+          <p style="display:inline; font-weight:700px">5 other urls</p>
+          <div class="row" style="position: absolute; bottom: 0; width: 100%; height: 50px; border-top: 1px solid #4E5D6C;">
+            <p class="pull-left" style="margin-top:5px;"><%= post.user.username %></p>
+            <p class="pull-right" style="margin-top:5px;">updated <%= time_ago_in_words(post.updated_at) %> ago</p>
+          </div>
         </div>
       </div>
     </div>

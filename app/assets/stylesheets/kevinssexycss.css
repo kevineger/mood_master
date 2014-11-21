@@ -10,6 +10,9 @@
 .input-group {
 	margin:10px;
 }
+.form-control {
+	padding-bottom:4px!important;
+}
 .desaturate {
 	opacity:.2;
 	filter: grayscale(100%);

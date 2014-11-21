@@ -7,68 +7,63 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="background-image">
-</div>
-<div class="background-color">
-</div>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height: 40px">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">LOGO GOES HERE</a>
-    </div>
-    <div>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:40px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Mood Master</a>
+      </div>
+      <div>
 
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><%=link_to "Posts", posts_path%></li>
-        <li><%=link_to "Create New Post",new_post_path%></li>
-      </ul>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><%=link_to "Posts", posts_path%></li>
+          <li><%=link_to "Create New Post",new_post_path%></li>
+        </ul>
 
-      <% if !user_signed_in? %>
+        <% if !user_signed_in? %>
         <%= form_for(:user, :html => {:class => "navbar-form navbar-right", :style=>"margin-top:5px; margin-bottom:5px"}, :url => session_path(:user)) do |f| %>
-            <div class="form-group" style="padding-right: 4px">
-              <%= f.text_field :login, :class => "form-control navbar-form-height" %>
-            </div>
-            <div class="form-group" style="padding-right: 4px">
-              <%= f.password_field :password, :class => "form-control navbar-form-height" %>
-            </div>
-            <button type="submit" class="btn btn-success navbar-form-height">Sign in</button>
-          <% end %>
-      <% else %>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=current_user.email%><span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><%=link_to 'Logout', destroy_user_session_path, :method => 'DELETE'%></li>
-              </ul>
-            </li>
-          </ul>
-      <% end %>
-    </div><!--/.navbar-collapse -->
-  </div>
-</nav>
+        <div class="form-group" style="padding-right: 4px">
+          <%= f.text_field :login, :class => "form-control navbar-form-height" %>
+        </div>
+        <div class="form-group" style="padding-right: 4px">
+          <%= f.password_field :password, :class => "form-control navbar-form-height" %>
+        </div>
+        <button type="submit" class="btn btn-success navbar-form-height">Sign in</button>
+        <% end %>
+        <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=current_user.email%><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%=link_to 'Logout', destroy_user_session_path, :method => 'DELETE'%></li>
+            </ul>
+          </li>
+        </ul>
+        <% end %>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<%= yield%>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <%= yield%>
 
 
-<footer style="position:absolute; bottom:0px;">
-  <center><p><strong>MoodMaster</strong> Copyright 2014</p>
-  </center>
-</footer>
-</div> <!-- /container -->
+  <footer style="position:absolute; bottom:0px;">
+    <center><p><strong>MoodMaster</strong> Copyright 2014</p>
+    </center>
+  </footer>
 
 
 <!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>
