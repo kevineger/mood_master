@@ -8,7 +8,7 @@
 <% else %>
     <%= link_to 'Like', like_post_path(@post), method: 'post'%>
 <% end %>-->
-<div class="container animated fadeIn" style="padding-top:20px;">
+<div class="container" style="padding-top:20px;">
 	<div class="row" style="text-align:center">
 		<h1><%= @post.name %></h1>
 		<%= image_tag("placeholder.png", :style=>'height:300px;') %>
@@ -21,27 +21,30 @@
 	</div>
 	<div class="row" style="padding-top:40px;">
 		<div class="col-md-3 col-pic">
-			<%= image_tag("youtube.png", :class=>'pic-url-full') %>
+			<!-- <%= image_tag("youtube.png", :class=>'pic-url-full') %> -->
+			<iframe width="100%" src="//www.youtube.com/embed/dQw4w9WgXcQ" rel="0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-3 col-pic">
+	        <!-- <%= image_tag("reddit.png", :class=>'pic-url-full') %> 
+	        <script src="http://www.reddit.com/hot/.embed?limit=5&t=all" style="width:100%; height:100px;" type="text/javascript"></script>-->
+		</div>
+		<div class="col-md-3 col-pic">
+	        <!-- <%= image_tag("imgur.png", :class=>'pic-url-full') %> -->
+	        <a href="http://imgur.com/vxiXcRp"><img src="http://i.imgur.com/vxiXcRp.jpg" title="Image Title" style="width:100%;"/></a>
 
 		</div>
 		<div class="col-md-3 col-pic">
-	        <%= image_tag("reddit.png", :class=>'pic-url-full') %>
-		</div>
-		<div class="col-md-3 col-pic">
-	        <%= image_tag("imgur.png", :class=>'pic-url-full') %>
+	        <!-- <%= image_tag("8tracks.svg", :class=>'pic-url-full') %> -->
+	        <iframe src="http://8tracks.com/mixes/4787162/player_v3_universal" width="263" height="263" style="border: 0px none;"></iframe>
 
-		</div>
-		<div class="col-md-3 col-pic">
-	        <%= image_tag("8tracks.svg", :class=>'pic-url-full') %>
 		</div>
 	</div>
-	<div class="row" style="text-align:center; margin-top:40px;">
-		<!-- For each non-featured-medium url -->
+<!-- 	<div class="row" style="text-align:center; margin-top:40px;">
 		<div class="col-md-3 col-md-offset-3">
 			<h2>Other Link 1</h2>
 		</div>
 		<div class="col-md-3">
 			<h2>Other Link 1</h2>
 		</div>
-	</div>
+	</div> -->
 </div>

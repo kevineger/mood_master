@@ -13,11 +13,11 @@
 <div class="col-lg-12">
   <div class="input-group input-group-lg">
     <span class="input-group-addon">Post Title</span>
-    <%= f.text_field :name, :class=>'form-control'%>
+    <%= f.text_field :name, :class=>'form-control', :placeholder=>'Name this Mood Page'%>
   </div>
   <div class="input-group input-group-lg">
     <span class="input-group-addon">Tags</span>
-    <%= f.text_field :tags, :class=>'form-control'%>
+    <%= f.text_field :tags, :class=>'form-control', :value => "", :placeholder => "Enter tags seperated with commas" %>
   </div>
   <div style="padding-top:40px;">
     <%= f.fields_for :contents do |builder| %>
