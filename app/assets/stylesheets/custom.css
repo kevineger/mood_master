@@ -24,6 +24,15 @@ h3 {
     font-size:140%;
     font-weight:700;
 }
+.heart {
+  font-size:40px;
+  margin-top:10px;
+  color:#CC181E;
+}
+.heart-empty {
+  color:#D1D1D1;
+  opacity:0.5;
+}
 .footer, .push {
     margin-top:20px;
     height: 4em;

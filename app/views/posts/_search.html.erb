@@ -1,0 +1,4 @@
+<%= form_tag(search_post_path, method: "get") do %>
+    <%= text_field :search, :class=>'form-control', :value => "", :placeholder => "Search your mood" %>
+    <%= submit_tag("Search")%>
+<% end %>

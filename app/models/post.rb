@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   has_many :contents
   has_many :likes
   accepts_nested_attributes_for :contents, :allow_destroy => true
+
   def like(user)
     if !self.liked?(user)
   	  Likes.create(post: self, user: user).save

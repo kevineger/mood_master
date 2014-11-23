@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       post 'like'
       post 'unlike'
     end
+    collection do
+      get 'search'
+    end
   end
 
   resources :contents
