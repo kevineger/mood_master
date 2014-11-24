@@ -76,6 +76,10 @@ class PostsController < ApplicationController
     redirect_to post_url(@post)
   end
 
+  def liked
+    @posts = Post.where(id:  Likes.where(user_id: current_user.id).map{|likes| likes.post_id})
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -84,6 +88,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :tags, contents_attributes: [:name, :link])
+      params.require(:post).permit(:name, :tags,:main_image, contents_attributes: [:name, :link])
     end
 end

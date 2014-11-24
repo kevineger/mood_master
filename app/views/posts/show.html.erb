@@ -11,7 +11,7 @@
 <div class="container" style="padding-top:20px;">
 	<div class="row" style="text-align:center">
 		<h1><%= @post.name %></h1>
-		<%= image_tag("placeholder.png", :style=>'height:300px;') %>
+		<%= image_tag(@post.main_image, :style=>'height:300px;') %>
 		<br>
 		<%  if @post.liked?(current_user) %>
 		    <%= link_to 'Unlike', unlike_post_path(@post), method: 'post'%>

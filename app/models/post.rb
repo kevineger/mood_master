@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
   has_many :likes
   accepts_nested_attributes_for :contents, :allow_destroy => true
 
+  mount_uploader :main_image, MainImageUploader
+
   pg_search_scope :tag_search, :associated_against => {
         :tags => :name
     }
@@ -28,11 +30,11 @@ class Post < ActiveRecord::Base
       tag = Tag.where(name: to_tag)
       if tag.blank?
         tag = Tag.new(name: to_tag)
-        tag.save()
+        tag.save
       end
       #   add to database
       self.tags << tag
-      self.save
     end
+    self.save
   end
 end

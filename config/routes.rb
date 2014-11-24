@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :posts do
+    collection do
+      get 'liked'
+    end
     member do
       post 'like'
       post 'unlike'
     end
+
   end
 
   resources :contents

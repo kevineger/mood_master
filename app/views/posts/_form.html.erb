@@ -19,6 +19,10 @@
     <span class="input-group-addon">Tags</span>
     <%= f.text_field :tags, :class=>'form-control', :value => "", :placeholder => "Enter tags seperated with commas" %>
   </div>
+  <div class="input-group">
+    <label>Image</label>
+    <%= f.file_field :main_image %>
+  </div>
   <div style="padding-top:40px;">
     <%= f.fields_for :contents do |builder| %>
       <div class="col-md-6">  

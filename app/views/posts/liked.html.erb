@@ -1,0 +1,61 @@
+<div class="container">
+  <h1>Recent Likes</h1>
+  <div class="row">
+    <% @posts.each do |post| %>
+        <div class="post-container">
+          <div class="row" style="margin-top:20px;">
+            <div class="col-lg-4 col-lg-offset-1" style="text-align:center;">
+              <!-- image -->
+              <%= link_to post do %>
+                  <%= image_tag(post.main_image, :style=>'height:300px;') %>
+              <% end %>
+            </div>
+            <div class="col-lg-6" style="position:relative; height:300px;">
+              <!-- content description -->
+              <h3>Title for post</h3>
+              <!-- <span class="glyphicon glyphicon-heart"></span> -->
+              <h4><3 243</h4>
+              <h4>9 total links</h4>
+              <!-- If link medium isn't included, add CSS class 'desaturized' to image (makes it B&W) -->
+              <%= image_tag("youtube.png", :class=>'pic-url-icon') %>
+              <%= image_tag("reddit.png", :class=>'pic-url-icon') %>
+              <%= image_tag("imgur.png", :class=>'pic-url-icon') %>
+              <%= image_tag("8tracks.svg", :class=>'pic-url-icon') %>
+              <!-- Get the correct number of other urls -->
+              <p style="display:inline; font-weight:700px">5 other urls</p>
+              <div class="row" style="position: absolute; bottom: 0; width: 100%; height: 50px; border-top: 1px solid #4E5D6C;">
+                <p class="pull-left" style="margin-top:5px;"><%= post.user.username %></p>
+                <p class="pull-right" style="margin-top:5px;">updated <%= time_ago_in_words(post.updated_at) %> ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- <h1>Listing posts</h1> -->
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= post.user.username %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+<!-- <%= link_to 'New Post', new_post_path %> -->
