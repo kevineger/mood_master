@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
         :tags => :name
     }
   def like(user)
-    if !self.liked?(user)
+    if self.liked?(user)
   	  Likes.create(post: self, user: user).save
     end
   end
@@ -23,7 +23,7 @@ class Post < ActiveRecord::Base
     end
   end
   def liked?(user)
-    Likes.where(user: user, post: self).exists?
+    Likes.where(user: user, post: self).blank?
   end
   def add_tags_with_check(tags)
     tags.each do |to_tag|
