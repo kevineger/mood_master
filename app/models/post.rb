@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
 
   mount_uploader :main_image, MainImageUploader
 
+  default_scope { order('created_at DESC') }
+
   pg_search_scope :tag_search, :associated_against => {
         :tags => :name
     }
