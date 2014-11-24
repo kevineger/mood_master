@@ -8,12 +8,12 @@
 				<h2 style="font-size:50px"><%= @post.name %></h2>
 				<%  if @post.liked?(current_user) %>
 				    <%= link_to unlike_post_path(@post), method: 'post' do%>
-				    	<span class="glyphicon glyphicon-heart-empty heart heart-empty"></span>
+				    	<span class="glyphicon glyphicon-heart heart"></span>
 				    <% end %>
 
 				<% else %>
 				    <%= link_to like_post_path(@post), method: 'post' do%>
-				    	<span class="glyphicon glyphicon-heart heart"></span>
+				    	<span class="glyphicon glyphicon-heart-empty heart heart-empty"></span>
 				    <% end %>
 				<% end %>
 			</div>

@@ -25,9 +25,9 @@
           <!-- content description -->
           <h3><%= post.name %></h3>
           <%  if post.liked?(current_user) %>
-            <span class="glyphicon glyphicon-heart-empty heart heart-empty small-heart"></span>
-          <% else %>
             <span class="glyphicon glyphicon-heart heart small-heart"></span>
+          <% else %>
+            <span class="glyphicon glyphicon-heart-empty heart heart-empty small-heart"></span>
           <% end %>
           <h4><3 243</h4>
           <h4><%= post.contents.count %> total links</h4>
