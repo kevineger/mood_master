@@ -3,14 +3,10 @@
     <div class="row">
       <div class="col-md-6">
         <p>Just input your mood . . .</p>
-        <div class="input-group" style="margin-top:40px;">
-          <input type="text" class="form-control">
-          <span class="input-group-btn">
-            <%= link_to posts_path do %>
-            <button class="btn btn-default" type="button">Go!</button>
-            <% end %>
-          </span>
+        <div class="input-group" style="margin-top:30px; width:100%; padding-right:30px;">
+          <%= render 'posts/search' %>
         </div>
+
         <!-- /input-group -->
       </div>
       <div class="col-md-6">

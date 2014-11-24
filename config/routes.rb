@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get 'liked'
+      get 'search'
     end
     member do
       post 'like'
       post 'unlike'
     end
-
   end
 
   resources :contents

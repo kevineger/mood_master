@@ -80,6 +80,12 @@ class PostsController < ApplicationController
     @posts = Post.where(id:  Likes.where(user_id: current_user.id).map{|likes| likes.post_id})
   end
 
+  def search
+    @tags = params[:tags].split(',')
+    @posts = Post.tag_search(@tags)
+    render 'index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

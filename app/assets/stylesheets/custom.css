@@ -24,9 +24,18 @@ h3 {
     font-size:140%;
     font-weight:700;
 }
+.heart {
+  font-size:120px;
+  margin-top:10px;
+  color:#CC181E;
+}
+.heart-empty {
+  color:#D1D1D1;
+  opacity:0.5;
+}
 .footer, .push {
-    margin-top:20px;
-    height: 4em;
+  margin-top:20px;
+  height: 4em;
 }
 body {
   padding-top: 40px;
@@ -38,14 +47,19 @@ body {
   background-size: cover;
 }
 .jumbotron {
-    background-color: rgba(43, 62, 80, 0.6)
+  background-color: rgba(43, 62, 80, 0.6)
 }
 .navbar-form-height{
-    height: 27px;
-    padding-top: 1px;
+  height: 27px;
+  padding-top: 1px;
 }
 .post-container {
-    margin:60px;
-    padding:40px;
-    background-color: rgba(43, 62, 80, 0.6)
+  margin:60px;
+  padding:40px;
+  background-color: rgba(43, 62, 80, 0.6)
+}
+.post-content {
+  margin-top:15px;
+  margin-bottom:15px;
+  background-color: rgba(43, 62, 80, 0.6)
 }
