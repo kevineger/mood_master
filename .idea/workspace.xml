@@ -2,25 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c800f018-2e54-467f-8baf-2f01692cb90a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/glyphicons/glyphicons_012_heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/glyphicons/glyphicons_019_heart_empty.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/posts/_search.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_superhero.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_superhero.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/kevinssexycss.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/kevinssexycss.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lander/main.html.erb" afterPath="$PROJECT_DIR$/app/views/lander/main.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mood_master.iml" afterPath="$PROJECT_DIR$/.idea/mood_master.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -446,7 +427,11 @@
       <created>1416796180313</created>
       <updated>1416796180313</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/kevineger/mood_master&#10;&#10;Conflicts:&#10;&#9;app/controllers/posts_controller.rb&#10;&#9;app/views/posts/show.html.erb&#10;&#9;config/routes.rb&#10;">
+      <created>1416796892484</created>
+      <updated>1416796892484</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -491,7 +476,8 @@
     </option>
     <MESSAGE value="search method added" />
     <MESSAGE value="pre merge&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre merge&#10;" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/kevineger/mood_master&#10;&#10;Conflicts:&#10;&#9;app/controllers/posts_controller.rb&#10;&#9;app/views/posts/show.html.erb&#10;&#9;config/routes.rb&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/kevineger/mood_master&#10;&#10;Conflicts:&#10;&#9;app/controllers/posts_controller.rb&#10;&#9;app/views/posts/show.html.erb&#10;&#9;config/routes.rb&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
