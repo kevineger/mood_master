@@ -1,10 +1,14 @@
 class Post < ActiveRecord::Base
+  include PgSearch
   belongs_to :user
-  has_many :tags
+  has_and_belongs_to_many :tags
   has_many :contents
   has_many :likes
   accepts_nested_attributes_for :contents, :allow_destroy => true
 
+  pg_search_scope :tag_search, :associated_against => {
+        :tags => :name
+    }
   def like(user)
     if !self.liked?(user)
   	  Likes.create(post: self, user: user).save
@@ -24,7 +28,7 @@ class Post < ActiveRecord::Base
       tag = Tag.where(name: to_tag)
       if tag.blank?
         tag = Tag.new(name: to_tag)
-        tag.save
+        tag.save()
       end
       #   add to database
       self.tags << tag

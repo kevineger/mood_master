@@ -1,4 +1,9 @@
-<%= form_tag(search_post_path, method: "get") do %>
-    <%= text_field :search, :class=>'form-control', :value => "", :placeholder => "Search your mood" %>
-    <%= submit_tag("Search")%>
+<%= form_tag(search_posts_path, method: "get") do %>
+	  <div class="input-group">
+      <input type="text" name="tags" class="form-control" placeholder="Search Query">
+      <span class="input-group-btn">
+        <%= submit_tag("Search", class: "btn btn-default", style: "display: inline;")%>
+      </span>
+    </div>
 <% end %>
+

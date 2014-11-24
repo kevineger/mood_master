@@ -1,5 +1,17 @@
 <div class="container">
   <div class="row">
+    <div class="row" style="margin-top:20px;"> 
+      <div class="col-lg-6 col-lg-offset-3">
+      <% if @tags %>
+        <h1 style="font-size: 24px;">Currently viewing 
+          <% @tags.each do |tag| %>
+            <span class="badge" style="font-size: 20px;"><%=tag%></span>
+          <% end %>
+        </h1>
+      <% end %>
+      <%= render 'posts/search' %>
+      </div>
+    </div>
   <% @posts.each do |post| %>
     <div class="post-container">
       <div class="row" style="margin-top:20px;">

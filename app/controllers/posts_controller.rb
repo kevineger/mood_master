@@ -77,7 +77,9 @@ class PostsController < ApplicationController
   end
 
   def search
-
+    @tags = params[:tags].split(',')
+    @posts = Post.tag_search(@tags)
+    render 'index'
   end
 
   private
