@@ -13,12 +13,14 @@
         <div class="col-lg-6" style="position:relative; height:300px;">
           <!-- content description -->
           <h3><%= post.name %></h3>
+          <% post.tags.each do |tag| %>
+              <span class="badge"><%= tag.name %></span>
+          <% end %>
           <% if post.liked?(current_user) %>
             <span class="glyphicon glyphicon-heart heart small-heart"></span>
           <% else %>
             <span class="glyphicon glyphicon-heart-empty heart heart-empty small-heart"></span>
           <% end %>
-          <h4><3 243</h4>
           <h4><%= post.contents.count %> total links</h4>
           <!-- If link medium isn't included, add CSS class 'desaturized' to image (makes it B&W) -->
           <%= image_tag("youtube.png", :class=>'pic-url-icon') %>

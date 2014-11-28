@@ -24,22 +24,28 @@
         <div class="col-lg-6" style="position:relative; height:300px;">
           <!-- content description -->
           <h3><%= post.name %></h3>
+          <div class="row" style="padding-left: 10px">
+            <% post.tags.each do |tag| %>
+                <span class="badge"><%= tag.name %></span>
+            <% end %>
+          </div>
           <%  if post.liked?(current_user) %>
             <span class="glyphicon glyphicon-heart heart small-heart"></span>
           <% else %>
             <span class="glyphicon glyphicon-heart-empty heart heart-empty small-heart"></span>
           <% end %>
-          <h4><3 243</h4>
           <h4><%= post.contents.count %> total links</h4>
           <!-- If link medium isn't included, add CSS class 'desaturized' to image (makes it B&W) -->
           <%= image_tag("youtube.png", :class=>'pic-url-icon') %>
           <%= image_tag("reddit.png", :class=>'pic-url-icon') %>
           <%= image_tag("imgur.png", :class=>'pic-url-icon') %>
           <%= image_tag("8tracks.svg", :class=>'pic-url-icon') %>
+
           <div class="row" style="position: absolute; bottom: 0; width: 100%; height: 50px; border-top: 1px solid #4E5D6C;">
             <p class="pull-left" style="margin-top:5px;"><%= post.user.username %></p>
             <p class="pull-right" style="margin-top:5px;">updated <%= time_ago_in_words(post.updated_at) %> ago</p>
           </div>
+
         </div>
       </div>
     </div>

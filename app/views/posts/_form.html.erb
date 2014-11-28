@@ -11,27 +11,31 @@
 <% end %>
 
 <div class="col-lg-12">
-  <div class="input-group">
-    <span class="input-group-addon">Post Title</span>
-    <%= f.text_field :name, :class=>'form-control', :placeholder=>'Name this Mood Page'%>
-  </div>
-  <div class="input-group">
-    <span class="input-group-addon">Tags</span>
-    <%= f.text_field :tags, :class=>'form-control', :value => "", :placeholder => "Enter tags seperated with commas" %>
-  </div>
-  <div class="input-group">
-    <label>Image</label>
-    <%= f.file_field :main_image %>
-  </div>
-  <div style="padding-top:40px;">
-    <%= f.fields_for :contents do |builder| %>
-      <div class="col-md-6">  
-        <%= render 'content_field', :f => builder %>
+      <div class="input-group">
+        <span class="input-group-addon" ><div class="form-field-80">Post Title</div></span>
+        <%= f.text_field :name, :class=>'form-control', :placeholder=>'Name this Mood Page'%>
       </div>
-    <% end %>
+      <div class="input-group">
+        <span class="input-group-addon"><div class="form-field-80">Tags</div></span>
+        <%= f.text_field :tags, :class=>'form-control', :value => "", :placeholder => "Enter tags seperated with commas" %>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><div class="form-field-80">Image</div></span>
+        <%= f.file_field :main_image, :class=>'form-control'%>
+      </div>
+      <div style="padding-top:40px;">
+        <%= f.fields_for :contents do |builder| %>
+
+            <%= render 'content_fields', :f => builder %>
+        <% end %>
+      </div>
   </div>
-  <div class="actions">
-    <%= f.submit "Submit Post", :class=>'btn btn-default'%>
+  <div class="clearfix"></div>
+  <div class="col-lg-12">
+      <%= f.submit "Submit Post", :class=>'btn btn-default col-md-6 col-md-offset-3'%>
+      <%= link_to_add_association f, :contents do%>
+          <button class="btn btn-primary pull-right">Add More content</button>
+      <% end %>
   </div>
-</div>
+
 <% end %>
